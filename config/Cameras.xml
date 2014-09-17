@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Cameras>
+    <camera id="1" name="1" room_id="1" url="rtsp://192.168.16.214/id=0" type="RTSP" NATTraserval="0" user="" pwd="" track="all" enable="1" />
+    <camera id="2" name="2" room_id="1" url="rtsp://192.168.16.214/id=1" type="RTSP" NATTraserval="0" user="" pwd="" track="video" enable="0" ch="1"/>
+    <camera id="3" name="3" room_id="1" url="rtsp://192.168.16.214/id=0" type="RTSP" NATTraserval="0" user="" pwd="" track="audio" enable="1" ch="2" />
+
+    <camera id="4" name="4" room_id="1" url="rtsp://192.168.16.214/id=0" type="RTSP" NATTraserval="0" user="" pwd="" track="all" enable="1" />
+    <camera id="5" name="5" room_id="1" url="rtsp://192.168.16.214/id=1" type="RTSP" NATTraserval="0" user="" pwd="" track="video" enable="0" ch="1"/>
+    <camera id="7" name="6" room_id="1" url="rtsp://192.168.16.214/id=0" type="RTSP" NATTraserval="0" user="" pwd="" track="audio" enable="1" ch="2" />
+<!--
+    <camera id="15" name="15" room_id="1" url="rtsp://192.168.13.31:8554" type="RTSP" NATTraserval="0" user="" pwd="" ch=""  enable="1" />
+    <camera id="3" name="3" room_id="1" url="rtsp://192.168.1.190:8554/mvc-media/audio1" type="RTSP" NATTraserval="0" user="" pwd="" ch="1" enable="1" />
+    <camera id="4" name="4" room_id="1" url="rtsp://192.168.1.190:8554/mvc-media/audio3" type="RTSP" NATTraserval="0" user="" pwd="" ch="3" enable="1" />
+-->
+</Cameras>
