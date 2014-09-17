@@ -1,4 +1,6 @@
-(./assets/log.jpg)
+
+[![Build Status](./assets/logo.jpg)](./assets/logo.jpg)
+
  [![Build Status](https://travis-ci.org/tommywu23/GTRecordService.svg)](https://travis-ci.org/tommywu23/GTRecordService)
  [![Dependency Status](https://img.shields.io/gemnasium/tommywu23/GTRecordService.svg)](https://gemnasium.com/tommywu23/GTRecordService)
 
