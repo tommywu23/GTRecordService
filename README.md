@@ -18,7 +18,7 @@ MTS - Streaming Media Transmission Server
 
 ## 1. Start Command
 
-client request start group of SM(Streaming Media)
+client request to start record of a group of SM(Streaming Media)
 
 POST /Recording
 
@@ -36,7 +36,7 @@ Error:
 
 ## 2. Stop Command
 
-client request stop group of SM(Streaming Media)
+client request stop record of a group of SM(Streaming Media)
 
 DELETE /Recording
 
@@ -52,9 +52,9 @@ Response:
 
 Error:
 
-## 3. Get current recording running status
+## 3. Get current record of running status
 
-client request get all of SM(Streaming Media) recording status
+client request to get record status of all SM(Streaming Media)
 
 GET /Recording
 
