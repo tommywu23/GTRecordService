@@ -20,59 +20,64 @@ MTS - Streaming Media Transmission Server
 
 client request to start record of a group of SM(Streaming Media)
 
-## POST /Recording
+## 1.1 Request
+
+POST /Recording
 
 Content-type: application/json
 
 Encoding: utf8
 
-## Content:
+Post Body:
 [{"name":“GT01","type":"camera","address":"rtsp://192.168.16.141:8554/stream.smp?address=192.168.16.214"},
 {"name":"GT02","type":"camera","address":"rtsp://192.168.16.141:8554/192.168.16.140:8554/stream.smp?address=192.168.16.211"}]
 
-##Key Description:
+Key Description:
 name - signal name to record
 
 type - signal type(camera)
 
 address - url for record
 
-## Response:
+## 1.2 Response:
 HTTP /1.1 200 OK
 
 Content-Type: application/json
+
+Response Body:
 
 {"recording":
 [{"name":“GT01","type":"camera","address":"rtsp://192.168.16.141:8554/stream.smp?address=192.168.16.214"},
 {"name":"GT02","type":"camera","address":"rtsp://192.168.16.141:8554/192.168.16.140:8554/stream.smp?address=192.168.16.211"}]
 ,"result":OK}
 
-## Error:
+## 1.3 Error:
 
-## 2. Stop Command
+to be continue...
+
+## 2 Stop Command
 
 client request stop record of a group of SM(Streaming Media)
 
-## DELETE /Recording
+## 2.1 Request
+
+DELETE /Recording
 
 Content-type: application/json
 
 Encoding: utf8
 
-Content:
-ditto
+Post Body: ditto 1.1
 
+## 2.2 Response: ditto 1.2
 
-## Response:
-ditto
-
-## Error:
-ditto
-
+## 2.3 Error: ditto 1.3
 
 ## 3. Get current record of running status
 
 client request to get record status of all SM(Streaming Media)
+
+## 3.1 Request
 
 GET /Recording
 
@@ -80,17 +85,18 @@ Content-type: application/json
 
 Encoding: utf8
 
-##Response:
+## 3.2 Response:
 
 HTTP /1.1 200 OK
 
 Content-Type: application/json
 
-##Json Data:
+Response Body:
+
 [{"id":"1","name":"encoder1","url":"rtsp://192.168.1.200/id=0","state":"off","seconds":0,"count":0,"file":""},
 {"id":"3","name":"encoder3","url":"rtsp://192.168.1.201/id=0","state":"off","seconds":0,"count":0,"file":""}]
 
-##Key Description:
+Key Description:
 
 id - MTS Unique identification
 
@@ -104,6 +110,6 @@ seconds - Record time(Units: seconds)
 
 file - Record file path
 
-##Error:
+## 3.3 Error:
 
 
