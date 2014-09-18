@@ -23,6 +23,7 @@ client request to start record of a group of SM(Streaming Media)
 POST /Recording
 
 Content-type: application/json
+
 Encoding: utf8
 
 Content:
@@ -41,6 +42,7 @@ client request stop record of a group of SM(Streaming Media)
 DELETE /Recording
 
 Content-type: application/json
+
 Encoding: utf8
 
 Content:
@@ -59,6 +61,7 @@ client request to get record status of all SM(Streaming Media)
 GET /Recording
 
 Content-type: application/json
+
 Encoding: utf8
 
 Content:
@@ -67,6 +70,27 @@ Content:
 ]
 
 Response:
+HTTP /1.1 200 OK
+
+Content-Type: application/json
+
+Json Data:
+[{"id":"1","name":"encoder1","url":"rtsp://192.168.1.200/id=0","state":"off","seconds":0,"count":0,"file":""},
+{"id":"3","name":"encoder3","url":"rtsp://192.168.1.201/id=0","state":"off","seconds":0,"count":0,"file":""}]
+
+Key Description:
+
+id - MTS Unique identification
+
+name - Encoder Name
+
+url - Streaming Media link address
+
+state - Record state(on|off)
+
+seconds - Record time(Units: seconds)
+
+file - Record file path
 
 Error:
 
