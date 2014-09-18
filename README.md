@@ -18,98 +18,109 @@ MTS - Streaming Media Transmission Server
 
 ## 1. Start Command
 
-client request to start record of a group of SM(Streaming Media)
+    client request to start record of a group of SM(Streaming Media)
 
 ## 1.1 Request
 
-POST /Recording
+    POST /Recording
 
-Content-type: application/json
+    Content-type: application/json
 
-Encoding: utf8
+    Encoding: utf8
 
-Post Body:
-[{"name":“GT01","type":"camera","address":"rtsp://192.168.16.141:8554/stream.smp?address=192.168.16.214"},
-{"name":"GT02","type":"camera","address":"rtsp://192.168.16.141:8554/192.168.16.140:8554/stream.smp?address=192.168.16.211"}]
+    Post Body:
 
-Key Description:
-name - signal name to record
+        [{"name":“GT01","type":"camera","address":"rtsp://192.168.16.141:8554/stream.smp?address=192.168.16.214"},
+        {"name":"GT02","type":"camera","address":"rtsp://192.168.16.141:8554/192.168.16.140:8554/stream.smp?address=192.168.16.211"}]
 
-type - signal type(camera)
+    Key Description:
 
-address - url for record
+        name - signal name to record
+
+        type - signal type(camera)
+
+        address - url for record
 
 ## 1.2 Response:
-HTTP /1.1 200 OK
 
-Content-Type: application/json
+    HTTP /1.1 200 OK
 
-Response Body:
+    Content-Type: application/json
 
-{"recording":
-[{"name":“GT01","type":"camera","address":"rtsp://192.168.16.141:8554/stream.smp?address=192.168.16.214"},
-{"name":"GT02","type":"camera","address":"rtsp://192.168.16.141:8554/192.168.16.140:8554/stream.smp?address=192.168.16.211"}]
-,"result":OK}
+    Response Body:
+
+        {"recording":
+            [{"name":“GT01","type":"camera","address":"rtsp://192.168.16.141:8554/stream.smp?address=192.168.16.214"},
+            {"name":"GT02","type":"camera","address":"rtsp://192.168.16.141:8554/192.168.16.140:8554/stream.smp?address=192.168.16.211"}]
+        ,"result":OK}
 
 ## 1.3 Error:
 
-to be continue...
+    to be continue...
 
 ## 2 Stop Command
 
-client request stop record of a group of SM(Streaming Media)
+    client request stop record of a group of SM(Streaming Media)
 
 ## 2.1 Request
 
-DELETE /Recording
+    DELETE /Recording
 
-Content-type: application/json
+    Content-type: application/json
 
-Encoding: utf8
+    Encoding: utf8
 
-Post Body: ditto 1.1
+    Post Body:
 
-## 2.2 Response: ditto 1.2
+        ditto 1.1
 
-## 2.3 Error: ditto 1.3
+## 2.2 Response:
+
+    ditto 1.2
+
+## 2.3 Error:
+
+    ditto 1.3
 
 ## 3. Get current record of running status
 
-client request to get record status of all SM(Streaming Media)
+    client request to get record status of all SM(Streaming Media)
 
 ## 3.1 Request
 
-GET /Recording
+    GET /Recording
 
-Content-type: application/json
+    Content-type: application/json
 
-Encoding: utf8
+    Encoding: utf8
 
 ## 3.2 Response:
 
-HTTP /1.1 200 OK
+    HTTP /1.1 200 OK
 
-Content-Type: application/json
+    Content-Type: application/json
 
-Response Body:
+    Response Body:
 
-[{"id":"1","name":"encoder1","url":"rtsp://192.168.1.200/id=0","state":"off","seconds":0,"count":0,"file":""},
-{"id":"3","name":"encoder3","url":"rtsp://192.168.1.201/id=0","state":"off","seconds":0,"count":0,"file":""}]
+        [{"id":"1","name":"encoder1","url":"rtsp://192.168.1.200/id=0","state":"off","seconds":0,"count":0,"file":""},
+         {"id":"3","name":"encoder3","url":"rtsp://192.168.1.201/id=0","state":"off","seconds":0,"count":0,"file":""}]
 
-Key Description:
+    Key Description:
 
-id - MTS Unique identification
+        id - MTS Unique identification
 
-name - Encoder Name
+        name - Encoder Name
 
-url - Streaming Media link address
+        url - Streaming Media link address
 
-state - Record state(on|off)
+        state - Record state(on|off)
 
-seconds - Record time(Units: seconds)
+        seconds - Record time(Units: seconds)
 
-file - Record file path
+        file - Record file path
 
 ## 3.3 Error:
+
+    to be continue...
 
 
