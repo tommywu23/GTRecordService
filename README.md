@@ -72,15 +72,15 @@ MTS - Streaming Media Transmission Server
 
     Post Body:
 
-        ditto 1.1
+        ditto with 1.1
 
 ## 2.2 Response:
 
-    ditto 1.2
+    ditto with 1.2
 
 ## 2.3 Error:
 
-    ditto 1.3
+    ditto with 1.3
 
 ## 3. Get current record of running status
 
