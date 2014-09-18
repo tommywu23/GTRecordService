@@ -103,6 +103,7 @@ var mts = {
 
     getEncoderByName: function(name,callback){
         if(callback) callback(_.find(content.encoders,function(item){
+            console.log(item);
             return item.name == name;
         }));
     },

@@ -39,8 +39,6 @@ var httpNotify = {
         };
 
         var req = http.request(options, function(res){
-            console.log('STATUS:' + res.statusCode);
-
             res.setEncoding('utf8');
             var data = {};
             res.on('data',function(chunk){
@@ -54,7 +52,7 @@ var httpNotify = {
 
         req.on('error',function(err){
             console.log('problem with request: ' + err.message);
-            client.send(res.statusCode);
+            client.send('request MTS failed',res.statusCode);
         });
 
         req.write('data\n');
