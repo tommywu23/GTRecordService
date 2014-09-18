@@ -104,21 +104,18 @@ MTS - Streaming Media Transmission Server
 
     Response Body:
 
-    [{"id":"1","name":"encoder1","url":"rtsp://192.168.1.200/id=0","state":"off","seconds":0,"count":0,"file":""},
-    {"id":"3","name":"encoder3","url":"rtsp://192.168.1.201/id=0","state":"off","seconds":0,"count":0,"file":""}]
+    [{"id":"1","name":"encoder1","url":"rtsp://192.168.1.200/id=0",
+      "state":"off","seconds":0,"count":0,"file":""},
+    {"id":"3","name":"encoder3","url":"rtsp://192.168.1.201/id=0",
+      "state":"off","seconds":0,"count":0,"file":""}]
 
   **Key Description:**
 
   * id - MTS Unique identification
-
   * name - Encoder Name
-
   * url - Streaming Media link address
-
   * state - Record state(on|off)
-
   * seconds - Record time(Units: seconds)
-
   * file - Record file path
 
 #### 3.3 Error:
