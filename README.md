@@ -37,11 +37,9 @@ MTS - Streaming Media Transmission Server
 
   **Key Description:**
 
-      * name - signal name to record
-
-      * type - signal type(camera)
-
-      * address - url for record
+  * name - signal name to record
+  * type - signal type(camera)
+  * address - url for record
 
 #### 1.2 Response:
 
