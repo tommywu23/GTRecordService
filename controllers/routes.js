@@ -23,6 +23,9 @@ router.get('/recording',function(req,res){
 });
 
 router.post('/recording',function(req,res){
+    if(req.headers['content-type'].indexOf('application/json') < 1) {
+        res.send('the content-type does not accept.', 400);
+    }
     req.body.forEach(function(item){
         data = item.address.replace('rtsp://','').split('/');
         //获取本地内容服务器地址
@@ -52,11 +55,16 @@ router.post('/recording',function(req,res){
                     }
                 });
             }
+
         }
     });
+    res.send('OK');
 });
 
 router.delete('/recording',function(req,res){
+    if(req.headers['content-type'].indexOf('application/json') < 1) {
+        res.send('the content-type does not accept.', 400);
+    }
     req.body.forEach(function(item){
         data = item.address.replace('rtsp://','').split('/');
         //获取本地内容服务器地址
@@ -88,6 +96,7 @@ router.delete('/recording',function(req,res){
             }
         }
     });
+    res.send('OK');
 });
 
 module.exports = router;
