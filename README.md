@@ -18,30 +18,30 @@ MTS - Streaming Media Transmission Server
 
 ### 1. Start Command
 
-    client request to start record of a group of SM(Streaming Media)
+  client request to start record of a group of SM(Streaming Media)
 
 #### 1.1 Request
 
-    **POST /Recording**
+**POST /Recording**
 
-    **Content-type:** application/json
+**Content-type:** application/json
 
-    **Encoding:** utf8
+**Encoding:** utf8
 
-    **Post Body:**
+**Post Body:**
 
         [{"name":“GT01","type":"camera",
             "address":"rtsp://192.168.1.10:8554/stream.smp?address=192.168.1.1"},
         {"name":"GT02","type":"camera",
             "address":"rtsp://192.168.1.10:8554/192.168.1.20:8554/stream.smp?address=192.168.1.2"}]
 
-    **Key Description:**
+**Key Description:**
 
-        *name - signal name to record
+*name - signal name to record
 
-        *type - signal type(camera)
+*type - signal type(camera)
 
-        *address - url for record
+*address - url for record
 
 #### 1.2 Response:
 
@@ -60,7 +60,7 @@ MTS - Streaming Media Transmission Server
 
 #### 1.3 Error:
 
-    to be continue...
+  to be continue...
 
 ## 2 Stop Command
 
