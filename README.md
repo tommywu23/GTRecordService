@@ -22,7 +22,7 @@ MTS - Streaming Media Transmission Server
 
 #### 1.1 Request
 
-  **POST /Recording**
+    **POST /Recording**
 
   **Content-type:** application/json
 
