@@ -37,11 +37,9 @@ MTS - Streaming Media Transmission Server
 
   **Key Description:**
 
-      * name - signal name to record
-
-      * type - signal type(camera)
-
-      * address - url for record
+  * name - signal name to record
+  * type - signal type(camera)
+  * address - url for record
 
 #### 1.2 Response:
 
@@ -76,15 +74,15 @@ MTS - Streaming Media Transmission Server
 
   **Post Body:**
 
-    ditto with 1.1
+  ditto with 1.1
 
 #### 2.2 Response:
 
-    ditto with 1.2
+  ditto with 1.2
 
 #### 2.3 Error:
 
-    ditto with 1.3
+  ditto with 1.3
 
 ### 3. Get current record of running status
 
@@ -106,25 +104,22 @@ MTS - Streaming Media Transmission Server
 
     Response Body:
 
-    [{"id":"1","name":"encoder1","url":"rtsp://192.168.1.200/id=0","state":"off","seconds":0,"count":0,"file":""},
-    {"id":"3","name":"encoder3","url":"rtsp://192.168.1.201/id=0","state":"off","seconds":0,"count":0,"file":""}]
+    [{"id":"1","name":"encoder1","url":"rtsp://192.168.1.200/id=0",
+      "state":"off","seconds":0,"count":0,"file":""},
+    {"id":"3","name":"encoder3","url":"rtsp://192.168.1.201/id=0",
+      "state":"off","seconds":0,"count":0,"file":""}]
 
   **Key Description:**
 
-    * id - MTS Unique identification
-
-    * name - Encoder Name
-
-    * url - Streaming Media link address
-
-    * state - Record state(on|off)
-
-    * seconds - Record time(Units: seconds)
-
-    * file - Record file path
+  * id - MTS Unique identification
+  * name - Encoder Name
+  * url - Streaming Media link address
+  * state - Record state(on|off)
+  * seconds - Record time(Units: seconds)
+  * file - Record file path
 
 #### 3.3 Error:
 
-    to be continue...
+  to be continue...
 
 
