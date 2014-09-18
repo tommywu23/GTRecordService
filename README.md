@@ -20,39 +20,55 @@ MTS - Streaming Media Transmission Server
 
 client request to start record of a group of SM(Streaming Media)
 
-POST /Recording
+## POST /Recording
 
 Content-type: application/json
 
 Encoding: utf8
 
-Content:
-[
-{},{}
-]
+## Content:
+[{"name":“GT01","type":"camera","address":"rtsp://192.168.16.141:8554/stream.smp?address=192.168.16.214"},
+{"name":"GT02","type":"camera","address":"rtsp://192.168.16.141:8554/192.168.16.140:8554/stream.smp?address=192.168.16.211"}]
 
-Response:
+##Key Description:
+name - signal name to record
 
-Error:
+type - signal type(camera)
+
+address - url for record
+
+## Response:
+HTTP /1.1 200 OK
+
+Content-Type: application/json
+
+{"recording":
+[{"name":“GT01","type":"camera","address":"rtsp://192.168.16.141:8554/stream.smp?address=192.168.16.214"},
+{"name":"GT02","type":"camera","address":"rtsp://192.168.16.141:8554/192.168.16.140:8554/stream.smp?address=192.168.16.211"}]
+,"result":OK}
+
+## Error:
 
 ## 2. Stop Command
 
 client request stop record of a group of SM(Streaming Media)
 
-DELETE /Recording
+## DELETE /Recording
 
 Content-type: application/json
 
 Encoding: utf8
 
 Content:
-[
-{},{}
-]
+ditto
 
-Response:
 
-Error:
+## Response:
+ditto
+
+## Error:
+ditto
+
 
 ## 3. Get current record of running status
 
@@ -64,21 +80,17 @@ Content-type: application/json
 
 Encoding: utf8
 
-Content:
-[
-{},{}
-]
+##Response:
 
-Response:
 HTTP /1.1 200 OK
 
 Content-Type: application/json
 
-Json Data:
+##Json Data:
 [{"id":"1","name":"encoder1","url":"rtsp://192.168.1.200/id=0","state":"off","seconds":0,"count":0,"file":""},
 {"id":"3","name":"encoder3","url":"rtsp://192.168.1.201/id=0","state":"off","seconds":0,"count":0,"file":""}]
 
-Key Description:
+##Key Description:
 
 id - MTS Unique identification
 
@@ -92,6 +104,6 @@ seconds - Record time(Units: seconds)
 
 file - Record file path
 
-Error:
+##Error:
 
 
