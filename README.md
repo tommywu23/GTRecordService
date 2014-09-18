@@ -22,9 +22,9 @@ MTS - Streaming Media Transmission Server
 
 #### 1.1 Request
 
-   **POST /Recording**
+  **POST /Recording**
 
-   **Content-type:** application/json
+  **Content-type:** application/json
 
   **Encoding:** utf8
 
@@ -74,15 +74,15 @@ MTS - Streaming Media Transmission Server
 
   **Post Body:**
 
-    ditto with 1.1
+  ditto with 1.1
 
 #### 2.2 Response:
 
-    ditto with 1.2
+  ditto with 1.2
 
 #### 2.3 Error:
 
-    ditto with 1.3
+  ditto with 1.3
 
 ### 3. Get current record of running status
 
@@ -109,20 +109,20 @@ MTS - Streaming Media Transmission Server
 
   **Key Description:**
 
-    * id - MTS Unique identification
+  * id - MTS Unique identification
 
-    * name - Encoder Name
+  * name - Encoder Name
 
-    * url - Streaming Media link address
+  * url - Streaming Media link address
 
-    * state - Record state(on|off)
+  * state - Record state(on|off)
 
-    * seconds - Record time(Units: seconds)
+  * seconds - Record time(Units: seconds)
 
-    * file - Record file path
+  * file - Record file path
 
 #### 3.3 Error:
 
-    to be continue...
+  to be continue...
 
 
