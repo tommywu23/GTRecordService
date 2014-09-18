@@ -16,32 +16,34 @@ MTS - Streaming Media Transmission Server
 
 ## API
 
-## 1. Start Command
+### 1. Start Command
 
     client request to start record of a group of SM(Streaming Media)
 
-## 1.1 Request
+#### 1.1 Request
 
-    POST /Recording
+    **POST /Recording**
 
-    Content-type: application/json
+    **Content-type:** application/json
 
-    Encoding: utf8
+    **Encoding:** utf8
 
-    Post Body:
+    **Post Body:**
 
-        [{"name":“GT01","type":"camera","address":"rtsp://192.168.16.141:8554/stream.smp?address=192.168.16.214"},
-        {"name":"GT02","type":"camera","address":"rtsp://192.168.16.141:8554/192.168.16.140:8554/stream.smp?address=192.168.16.211"}]
+        [{"name":“GT01","type":"camera",
+            "address":"rtsp://192.168.1.10:8554/stream.smp?address=192.168.1.1"},
+        {"name":"GT02","type":"camera",
+            "address":"rtsp://192.168.1.10:8554/192.168.1.20:8554/stream.smp?address=192.168.1.2"}]
 
-    Key Description:
+    **Key Description:**
 
-        name - signal name to record
+        *name - signal name to record
 
-        type - signal type(camera)
+        *type - signal type(camera)
 
-        address - url for record
+        *address - url for record
 
-## 1.2 Response:
+#### 1.2 Response:
 
     HTTP /1.1 200 OK
 
@@ -50,11 +52,13 @@ MTS - Streaming Media Transmission Server
     Response Body:
 
         {"recording":
-            [{"name":“GT01","type":"camera","address":"rtsp://192.168.16.141:8554/stream.smp?address=192.168.16.214"},
-            {"name":"GT02","type":"camera","address":"rtsp://192.168.16.141:8554/192.168.16.140:8554/stream.smp?address=192.168.16.211"}]
+            [{"name":“GT01","type":"camera",
+                "address":"rtsp://192.168.1.10:8554/stream.smp?address=192.168.1.1"},
+             {"name":"GT02","type":"camera",
+                "address":"rtsp://192.168.1.10:8554/192.168.1.20:8554/stream.smp?address=192.168.1.2"}]
         ,"result":OK}
 
-## 1.3 Error:
+#### 1.3 Error:
 
     to be continue...
 
