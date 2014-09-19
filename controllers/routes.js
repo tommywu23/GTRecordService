@@ -36,7 +36,7 @@ router.post('/recording',function(req,res){
                 encoders = mts.getEncodersByIp(encoderIp);
                 if(encoders.length > 0){
                     encoders.forEach(function(encoder){
-                        encoder.name = item.name;
+                        encoder.name = each.name;
                         mts.start(encoder.id,encoder.name + "_" + encoder.id,res);
                      });
                 }
