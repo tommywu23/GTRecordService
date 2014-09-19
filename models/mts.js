@@ -101,10 +101,9 @@ var mts = {
         });
     },
 
-    getEncoderByName: function(name,callback){
+    getEncoderByName: function(encoder,callback){
         if(callback) callback(_.find(content.encoders,function(item){
-            console.log(item);
-            return item.name == name;
+            return item.name == encoder;
         }));
     },
 
@@ -178,9 +177,11 @@ var mts = {
         });
         var ids = [];
         encoders.forEach(function(item){
-            ids.push(item.id);
-           delete content.encoders[content.encoders.indexOf(item)];
+           ids.push(item.id);
+           content.encoders.splice(content.encoders.indexOf(item));
+         /*  delete content.encoders[content.encoders.indexOf(item)];*/
         });
+
         if(callback) callback(ids);
     },
 

@@ -49,12 +49,10 @@ MTS - Streaming Media Transmission Server
 
     Response Body:
 
-    {"recording":
-        [{"name":“GT01","type":"camera",
-            "address":"rtsp://192.168.1.10:8554/stream.smp?address=192.168.1.1"},
-        {"name":"GT02","type":"camera",
-            "address":"rtsp://192.168.1.10:8554/192.168.1.20:8554/stream.smp?address=192.168.1.2"}]
-    ,"result":OK}
+     [{"name":“GT01","type":"camera",
+       "address":"rtsp://192.168.1.10:8554/stream.smp?address=192.168.1.1"},
+      {"name":"GT02","type":"camera",
+       "address":"rtsp://192.168.1.10:8554/192.168.1.20:8554/stream.smp?address=192.168.1.2"}]
 
 #### 1.3 Error:
 
